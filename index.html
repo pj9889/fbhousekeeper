@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Appoint Housekeeper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #111111;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container for screen framing */
+        .page-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #000;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Background Image Area */
+        .image-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        /* Gradient for clear button contrast */
+        .overlay-gradient {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 35%;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* Action Button Container */
+        .cta-container {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            padding: 20px 20px 30px 20px;
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* Animated Telegram Button */
+        .tg-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #0088cc, #00a8ff);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 8px 25px rgba(0, 136, 204, 0.5);
+            transition: all 0.3s ease;
+            animation: pulse-glow 2s infinite;
+        }
+
+        .tg-button:hover, .tg-button:active {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0, 136, 204, 0.7);
+            background: linear-gradient(135deg, #0077b5, #0099e6);
+        }
+
+        .tg-icon {
+            width: 28px;
+            height: 28px;
+            fill: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Glowing animation to draw user's eye */
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 136, 204, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 136, 204, 0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- Full Screen Image -->
+        <div class="image-wrapper">
+            <!-- Updated Image File Name -->
+            <img src="hk99.webp" alt="Housekeeper Application">
+        </div>
+
+        <div class="overlay-gradient"></div>
+
+        <!-- Call To Action -->
+        <div class="cta-container">
+            <!-- আপনার টেলিগ্রামের লিংকটি নিচে বসাবেন -->
+            <a href="https://t.me/your_telegram_username" class="tg-button" target="_blank" rel="noopener noreferrer">
+                <svg class="tg-icon" viewBox="0 0 24 24">
+                    <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-2.02 9.52c-.15.68-.55.85-1.12.53l-3.09-2.28-1.49 1.43c-.16.16-.3.3-.62.3l.22-3.14 5.72-5.17c.25-.22-.05-.35-.39-.12l-7.07 4.45-3.05-.95c-.66-.21-.67-.66.14-.98l11.91-4.59c.55-.2 1.03.13.84.99z"/>
+                </svg>
+                <span>APPOINT ME HERE</span>
+            </a>
+
+            <!-- Facebook Compliance Footer Links -->
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <span>•</span>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
